@@ -8,5 +8,5 @@ class uberX(car):
     
     def __init__(self, license, driver, brand, model):
         super.__init__(license, driver)
-        self.brand      =brand
-        self.model      =model
+        self.brand          = brand
+        self.model          = model

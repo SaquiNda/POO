@@ -2,46 +2,21 @@ from lib2to3.pgen2 import driver
 from pprint import pprint
 from account import Account
 from car import car
-from payment import payment
-from router import router
+from cash import cash
+from uberX import uberX
+from uberConfort import uberConfort
 
 if __name__ == "__main__":
     print("hola mundo")
     
-    carro = car()
-    carro.id          = 5
-    carro.brand       ="toyota"
-    carro.driver      ="David"
-    carro.passager    = 5
-
-    pprint(vars(car))
-
-    carro2 = car()
-    carro2.id           = 5
-    carro2.brand        ="kya"
-    carro2.driver       ="sad"
-    carro2.passager     = 6
-
-    pprint(vars(carro2))
+    car = car("PBO5555", Account("david", "1726210790", "25"))
+    print(vars(car))
+    print(vars(car.driver))
     
-    user = Account()
-    user.id             = 8
-    user.name           ="Solis"
-    user.Document       ="xml"
-    user.mail           ="eliasdavidsch@hotmail.com"
-    user.Password       ="242514"
+    uberX = uberX("PCC-12345", Account("david", "145478245", "35"), "chevy", "spark")
+    print(vars(uberX))
+    print(vars(uberX.driver))
     
-    pprint(vars(Account))
-    
-    buy = payment()
-    buy.id              = 9
-    buy.ammount         = 15
-    
-    pprint(vars())
-    
-    get = router()
-    get.id              = 6
-    get.start           = "inicio"
-    get.end             = "fin"
-    
-    pprint(vars())
+    uberConfort = uberConfort("p3k-45621", Account("jose", "152463245"), "dogde", "cuero", "6")
+    print(vars(uberConfort))
+    print((uberConfort.driver))
